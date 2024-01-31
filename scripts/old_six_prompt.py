@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from modules import shared,scripts,script_callbacks
 current_script = os.path.realpath(__file__)
 current_folder = os.path.dirname(current_script)   
-work_basedir = os.path.dirname(current_folder)   #本插件目录  
+work_basedir = os.path.dirname(current_folder)   #Plugin directory  
 path1 = work_basedir+ r"/json"
 path2 = work_basedir+ r"/yours"
 pathrandom = work_basedir+ r"/random"
@@ -129,7 +129,7 @@ class Script(scripts.Script):
                 
             with gr.Row(elem_id=eid):
                        with gr.Accordion(label="SixGod_K_En v1.65.1",open=False):
-                             gr.HTML('<a class="oldsix-tips" href="https://github.com/thisjam/sd-webui-oldsix-prompt/">【使用说明书】')
+                             gr.HTML('<a class="oldsix-tips" href="https://github.com/thisjam/sd-webui-oldsix-prompt/"> User manual')
                             
                              textarea=gr.TextArea(self.json,elem_id=tid,visible=False)
                              traninput=gr.Textbox(elem_classes="old-six-traninput",visible=False,show_label="",placeholder="Press [ALT+Q] to Show/Hide")
