@@ -128,37 +128,37 @@ class Script(scripts.Script):
                 
                 
             with gr.Row(elem_id=eid):
-                       with gr.Accordion(label="SixGod_K提示词 v1.65.1",open=False):
+                       with gr.Accordion(label="SixGod_K_En v1.65.1",open=False):
                              gr.HTML('<a class="oldsix-tips" href="https://github.com/thisjam/sd-webui-oldsix-prompt/">【使用说明书】')
                             
                              textarea=gr.TextArea(self.json,elem_id=tid,visible=False)
-                             traninput=gr.Textbox(elem_classes="old-six-traninput",visible=False,show_label="",placeholder="输入中文后按回车翻译,[ALT+Q]键呼出/隐藏")
+                             traninput=gr.Textbox(elem_classes="old-six-traninput",visible=False,show_label="",placeholder="Press [ALT+Q] to Show/Hide")
                              tcache=gr.Textbox(elem_classes="old-six-tcache",visible=False)
                             
                              with gr.Column(scale=4,elem_id="oldsix-optit"):
                                 btnreload=gr.Button('🔄',elem_classes="oldsix-reload sm secondary gradio-button svelte-1ipelgc")
-                                gr.Button('清空正面提示词', variant="secondary",elem_classes="oldsix-clear")
-                                gr.Button('清空负面提示词',variant="secondary",elem_classes="oldsix-clear")
-                                chDynamic=gr.Checkbox(label="锁定【动态批次】提示词",elem_classes="oldsix-checklock",container=False,scale=1)
+                                gr.Button('Clear positive prompts', variant="secondary",elem_classes="oldsix-clear")
+                                gr.Button('Clear negative prompts',variant="secondary",elem_classes="oldsix-clear")
+                                chDynamic=gr.Checkbox(label="Lock the 'Dynamic Batch' prompts",elem_classes="oldsix-checklock",container=False,scale=1)
                                 
                                
                              with gr.Column(scale=4,elem_id="oldsix-optit"):
                                   gr.HTML('<p class="oldsix-classes-shop"></p>')  
-                             with gr.Accordion(label="随机灵感",open=False):                               
-                                rdtextareaEn=gr.TextArea(label='英文预览框',elem_id='randomTextEn',lines=3,visible=False)
-                                rdtextareaZh=gr.TextArea(label='预览框',elem_id='randomTextZh',lines=3,interactive=False)     
+                             with gr.Accordion(label="Random inspiration",open=False):                               
+                                rdtextareaEn=gr.TextArea(label='English preview box',elem_id='randomTextEn',lines=3,visible=False)
+                                rdtextareaZh=gr.TextArea(label='Preview box',elem_id='randomTextZh',lines=3,interactive=False)     
                                 with gr.Row():       
                                      with gr.Column(scale=4):                    
-                                        txtstart=gr.Textbox(placeholder='开头占位提示词',show_label=False,elem_classes="oldsix-txt-start")
+                                        txtstart=gr.Textbox(placeholder='Placeholder prompts at the beginning',show_label=False,elem_classes="oldsix-txt-start")
                                      with gr.Column(scale=4):     
-                                        txtend=gr.Textbox(placeholder='结尾占位提示词',show_label=False,elem_classes="oldsix-txt-end")
+                                        txtend=gr.Textbox(placeholder='Placeholder prompts at the end',show_label=False,elem_classes="oldsix-txt-end")
                                 with gr.Row():
                                     with gr.Column(scale=4):
-                                         btnRandom=gr.Button('随机灵感关键词',variant="primary")                                                               
+                                         btnRandom=gr.Button('Random inspiration keywords',variant="primary")                                                               
                                     with gr.Column(scale=4):  
-                                         gr.Button('分类组合随机',variant="primary",elem_classes="btn-crandom") 
+                                         gr.Button('Random combination by category',variant="primary",elem_classes="btn-crandom") 
                                     with gr.Column(scale=4):  
-                                         btnsend=gr.Button('发送到提示词框',variant="primary",elem_classes="oldsix-btnSend") 
+                                         btnsend=gr.Button('Send to prompt box',variant="primary",elem_classes="oldsix-btnSend") 
                                         
             
             def tanslatePromp(text):
